@@ -1,0 +1,33 @@
+{
+  "name": "react-native-smile-identity",
+  "title": "React Native Smile Identity",
+  "version": "1.0.39",
+  "description": "TODO",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github_account/react-native-smile-identity.git",
+    "baseUrl": "https://github.com/github_account/react-native-smile-identity"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "Your Name <yourname@email.com>",
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "peerDependencies": {
+    "react": "16.8.6",
+    "react-native": "0.61.5"
+  },
+  "devDependencies": {
+    "react": "16.8.6",
+    "react-native": "0.61.5"
+  },
+  "bugs": {
+    "url": "https://github.com/github_account/react-native-smile-identity/issues"
+  },
+  "homepage": "https://github.com/github_account/react-native-smile-identity#readme"
+}
