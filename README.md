@@ -9,7 +9,7 @@ Run `npm install` to install dependencies. This must be done before any other st
 ```
 
 ```
-Run `react-native link` to link this library on React Native < 0.59.0
+Run `react-native link` to link this library on React Native < 0.60.0
 ```
 
 
