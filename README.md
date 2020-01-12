@@ -11,10 +11,10 @@ Run `react-native link` to link this library on React Native < 0.60.0
 &nbsp;
 ## Android Setup:
 #### -  Follow the Instructions on the [Android Readme](https://github.com/PiggyTech/smileidentity-react-native-wrapper/tree/master/android)
- <br /> 
+&nbsp;
 ## iOS Setup:
 #### -  Follow the Instructions on the [iOS Readme](https://github.com/PiggyTech/smileidentity-react-native-wrapper/tree/master/ios)
- <br /> 
+&nbsp;
 ## Authors
 
 * **Oyeleke Okiki** - [Yeet!](http://oyelekeokiki.com)
