@@ -1,7 +1,8 @@
 # smileidentity-react-native-wrapper
 React Native wrapper for smile identity Mobile SDK
 
-#### -  Download the required Smile Identity Libraries for Android or iOS on the [Smile Identity Website](https://test-smileid.herokuapp.com/sdk)
+Installation:
+`npm i smileidentity-react-native-wrapper` OR `yarn add smileidentity-react-native-wrapper`
 
 ```
 Run `npm install` to install dependencies. This must be done before any other step.
@@ -10,6 +11,10 @@ Run `npm install` to install dependencies. This must be done before any other st
 ```
 Run `react-native link` to link this library on React Native < 0.59.0
 ```
+
+
+#### -  Download the required Smile Identity Libraries for Android or iOS on the [Smile Identity Website](https://test-smileid.herokuapp.com/sdk)
+
 
 ## Android Setup:
 #### -  Follow the Instructions on the [Android Readme](https://github.com/PiggyTech/smileidentity-react-native-wrapper/tree/master/android)
