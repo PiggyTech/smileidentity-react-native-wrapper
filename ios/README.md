@@ -2,6 +2,11 @@
 
 #### -  Navigate to the ios subdirectory
 #### -  Run pod install.
+
+```
+If your project does not already use Swift, Enable a Bridging Header by adding a new Swift file to your project. (See Image below)
+``` 
+![alt text](https://user-images.githubusercontent.com/13585693/72226580-e6afce00-3592-11ea-83c0-3cfa95e84c68.png "Enable Bridging Header")
 ```
 Add the SmileIdentity framework as shown below.
 ```
