@@ -3,11 +3,6 @@ React Native wrapper for smile identity Mobile SDK
 
 Installation:
 `npm i smileidentity-react-native-wrapper` OR `yarn add smileidentity-react-native-wrapper`
-
-```
-Run `npm install` to install dependencies. This must be done before any other step.
-```
-
 ```
 Run `react-native link` to link this library on React Native < 0.60.0
 ```
