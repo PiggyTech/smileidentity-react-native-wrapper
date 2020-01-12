@@ -1,6 +1,6 @@
 {
-  "name": "react-native-smile-identity",
-  "title": "React Native Smile Identity",
+  "name": "smileidentity-react-native-wrapper",
+  "title": "Smile Identity React Native wrapper",
   "version": "1.0.39",
   "description": "TODO",
   "main": "index.js",
@@ -9,13 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-smile-identity.git",
-    "baseUrl": "https://github.com/github_account/react-native-smile-identity"
+    "url": "git+https://github.com/PiggyTech/smileidentity-react-native-wrapper.git",
+    "baseUrl": "https://github.com/PiggyTech/smileidentity-react-native-wrapper"
   },
   "keywords": [
     "react-native"
   ],
-  "author": "Your Name <yourname@email.com>",
+  "author": "PiggyTech",
   "license": "MIT",
   "licenseFilename": "LICENSE",
   "peerDependencies": {
@@ -27,7 +27,7 @@
     "react-native": "0.61.5"
   },
   "bugs": {
-    "url": "https://github.com/github_account/react-native-smile-identity/issues"
+    "url": "https://github.com/PiggyTech/smileidentity-react-native-wrapper/issues"
   },
-  "homepage": "https://github.com/github_account/react-native-smile-identity#readme"
+  "homepage": "https://github.com/PiggyTech/smileidentity-react-native-wrapper#readme"
 }
