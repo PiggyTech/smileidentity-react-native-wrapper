@@ -8,7 +8,7 @@ Run `react-native link` to link this library on React Native < 0.60.0
 ```
 &nbsp;
 #### -  Download the required Smile Identity Libraries for Android or iOS on the [Smile Identity Website](https://test-smileid.herokuapp.com/sdk)
- <br /> 
+&nbsp;
 ## Android Setup:
 #### -  Follow the Instructions on the [Android Readme](https://github.com/PiggyTech/smileidentity-react-native-wrapper/tree/master/android)
  <br /> 
