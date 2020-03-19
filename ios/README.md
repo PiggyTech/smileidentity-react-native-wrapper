@@ -7,9 +7,9 @@
 If your project does not already use Swift, Enable a Bridging Header by adding a new Swift file to your project. (See Image below)
 ``` 
 ![alt text](https://user-images.githubusercontent.com/13585693/72226580-e6afce00-3592-11ea-83c0-3cfa95e84c68.png "Enable Bridging Header")
-#### -  Add the SmileIdentity framework
+#### -  Add the SmileIdentity framework to your iOS Project (in Xcode)
 ```
-Drag the Smile_Identity_SDK.framework file into your iOS Project's Frameworks folder.
+Drag the Smile_Identity_SDK.framework file into your Project's Frameworks folder.
 ```
 ![alt text](https://user-images.githubusercontent.com/13585693/71706727-0bfc4980-2de7-11ea-81d0-38d0164f6574.png "Adding Framework")
 
