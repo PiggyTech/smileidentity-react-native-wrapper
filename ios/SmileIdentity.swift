@@ -43,21 +43,11 @@ class SmileIdentity: RCTEventEmitter {
                 return
             }
             self.controllerReference = rootViewController;
-            self.previewView = VideoPreviewView()
-            self.previewBackgroundView = UIView()
-
             let controllerViewBounds = self.controllerReference.view.bounds
-
-            self.previewBackgroundView.frame = controllerViewBounds
-            self.previewBackgroundView.backgroundColor = .black
-            self.previewView.backgroundColor = .black
-
             let captureRect = CGRect(x: 0, y: (controllerViewBounds.maxY - controllerViewBounds.width)/2, width: controllerViewBounds.width, height: controllerViewBounds.width) //Using a square so it makes sense
-            self.previewView.frame = captureRect; //Adjustable
-            self.previewBackgroundView.addSubview(self.previewView)
 
-            self.controllerReference.view.addSubview(self.previewBackgroundView)
-
+            self.setupCameraViewsWithRects(captureRect, controllerViewBounds: controllerViewBounds)
+            self.addCancelButton()
 
             self.captureSelfie = CaptureSelfie()
             self.captureSelfie?.setup(
@@ -69,17 +59,41 @@ class SmileIdentity: RCTEventEmitter {
 
             self.captureSelfie?.start( screenRect: captureRect, userTag: self.userTag )
         }
-
     }
 
+    private func setupCameraViewsWithRects(_ captureRect: CGRect, controllerViewBounds: CGRect) {
+        self.previewView = VideoPreviewView()
+        self.previewBackgroundView = UIView()
+
+        self.previewBackgroundView.frame = controllerViewBounds
+        self.previewBackgroundView.backgroundColor = .black
+        self.previewView.backgroundColor = .black
+
+        self.previewView.frame = captureRect; //Adjustable
+
+        self.previewBackgroundView.addSubview(self.previewView)
+        self.controllerReference.view.addSubview(self.previewBackgroundView)
+    }
+
+    private func addCancelButton() {
+        let button   = UIButton(type: UIButton.ButtonType.system) as UIButton
+        let buttonWidth: CGFloat = 75;
+        button.frame = CGRect(x: self.controllerReference.view.frame.width - 42 - buttonWidth/2, y: 24, width: buttonWidth, height: 105)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        button.setTitle("Cancel", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.addTarget(self, action: #selector(stopCapturing), for: .touchUpInside)
+
+        self.controllerReference.view.addSubview(button)
+    }
     @objc
     public func stopCapturing() {
         guard captureSelfie != nil else {
             return; }
         captureSelfie!.stop()
-
         self.previewView.removeFromSuperview()
-        self.previewBackgroundView.removeFromSuperview()
+        self.previewBackgroundView.removeFromSuperview();
+
     }
 }
 
@@ -91,7 +105,15 @@ extension SmileIdentity: CaptureSelfieDelegate {
             return
         }
         let imagePath = Utilities.saveImageDocumentDirectory(imageName: self.userTag, image: image, compressionQuality: self.compressionQuality)
+
+       let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: imagePath) {
+            print("FILE AVAILABLE")
+        } else {
+            print("FILE NOT AVAILABLE")
+        }
         onCompleteCallback?([imagePath])
+        stopCapturing()
 
     }
 
@@ -103,5 +125,3 @@ extension SmileIdentity: CaptureSelfieDelegate {
         EventEmitter.sharedInstance.dispatch(name: "FaceChanged", body: faceState)
     }
 }
-
-///var/mobile/Containers/Data/Application/636D71EE-7DA5-4264-A17F-81C29A7331D7/Documents/TempFile
