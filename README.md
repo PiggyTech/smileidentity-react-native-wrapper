@@ -19,7 +19,7 @@ Run `react-native link` to link this library on React Native < 0.60.0
 
 #### -  Usage:  
 
-##Import Smile Identity into your JavaScript Project
+## Import Smile Identity into your JavaScript Project
 
 ```javascript
 import SmileIdentity from 'react-native-smile-identity';
