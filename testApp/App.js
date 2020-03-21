@@ -24,6 +24,7 @@ export default class App extends Component<{}> {
   /**
    * Event Listeners
    */
+
   componentDidMount() {
     const eventEmitter = new NativeEventEmitter(SmileIdentity);
     eventEmitter.addListener('FaceChanged', faceChangedEventValue => {
@@ -33,21 +34,31 @@ export default class App extends Component<{}> {
       console.log(errorMessage);
     });
   }
+
   render() {
     const onCompleteCallback = bitmapFilePath => {
       console.log(`${bitmapFilePath} `);
+      pauseCapturingSelfie();
     };
 
     const options = {
       photoQuality: 0.9,
-      fileName: 'TempFile',
+      fileName: 'TestFileName',
       smileRequired: true,
       captureSmileManually: false,
       cameraFacingFront: true,
     };
 
-    const captureSelfie = () => {
+    const startCapturingSelfie = () => {
       SmileIdentity.captureSelfie(options, onCompleteCallback);
+    };
+
+    const pauseCapturingSelfie = () => {
+      SmileIdentity.pauseCapturing()
+    };
+
+    const stopCapturingSelfie = () => {
+      SmileIdentity.stopCapturing()
     };
 
     return (
@@ -59,7 +70,7 @@ export default class App extends Component<{}> {
           </View>
 
           <View style={styles.engine}>
-            <Button title="Take Selfie Button" onPress={captureSelfie} />
+            <Button title="Take Selfie Button" onPress={startCapturingSelfie} />
           </View>
         </SafeAreaView>
       </>

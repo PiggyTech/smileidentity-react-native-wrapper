@@ -134,6 +134,12 @@ public class SmileIdentityModule extends ReactContextBaseJavaModule
         });
     }
 
+    @ReactMethod
+    @SuppressWarnings("unused")
+    private void stopCapturing() {
+        onHostDestroy();
+    }
+
     @SuppressWarnings("UnusedReturnValue")
     private boolean takePicture() {
         if (smartSelfieManager == null) {

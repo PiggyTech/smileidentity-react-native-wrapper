@@ -86,13 +86,26 @@ class SmileIdentity: RCTEventEmitter {
 
         self.controllerReference.view.addSubview(button)
     }
-    @objc
+
+    @objc(pauseCapturing)
+    public func pauseCapturing() {
+        DispatchQueue.main.async { [unowned self] in
+            guard self.captureSelfie != nil else {
+                return; }
+            self.captureSelfie!.stop();
+        }
+
+    }
+    
+    @objc(stopCapturing)
     public func stopCapturing() {
-        guard captureSelfie != nil else {
-            return; }
-        captureSelfie!.stop()
-        self.previewView.removeFromSuperview()
-        self.previewBackgroundView.removeFromSuperview();
+        DispatchQueue.main.async { [unowned self] in
+            guard self.captureSelfie != nil else {
+                return; }
+            self.captureSelfie!.stop()
+            self.previewView.removeFromSuperview()
+            self.previewBackgroundView.removeFromSuperview();
+        }
 
     }
 }
@@ -113,8 +126,6 @@ extension SmileIdentity: CaptureSelfieDelegate {
             print("FILE NOT AVAILABLE")
         }
         onCompleteCallback?([imagePath])
-        stopCapturing()
-
     }
 
     func onError(sidError: SIDError) {
