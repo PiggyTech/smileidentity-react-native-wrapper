@@ -66,10 +66,15 @@ Manually stop capturing **and remove camera overlay** with
 SmileIdentity.stopCapturing()
 ```
 
+## Listening to Events (Optional)
+You can listen to face changed events and errors from the camera preview
 
+Import NativeEventEmitter
 ```javascript
 import {NativeEventEmitter} from 'react-native';
 ```
+
+Listen to `FaceChanged` and `Error` events
 
 ```javascript
 componentDidMount() {
@@ -84,7 +89,7 @@ componentDidMount() {
   ```
   
 ## Example Project
-You can check out the [testAPp](https://github.com/PiggyTech/smileidentity-react-native-wrapper/tree/master/testApp)
+You can check out the [Sample App](https://github.com/PiggyTech/smileidentity-react-native-wrapper/tree/master/testApp)
 
 ## Authors
 
