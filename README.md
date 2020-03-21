@@ -25,7 +25,7 @@ Run `react-native link` to link this library on React Native < 0.60.0
 import SmileIdentity from 'react-native-smile-identity';
 ```
 
-SmileIdentity has 3 functions
+`SmileIdentity` has 3 functions
 - [startCapturingSelfie](#startCapturingSelfie)
 - [pauseCapturing](#pauseCapturing)
 - [stopCapturing](#stopCapturing)
