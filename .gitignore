@@ -144,3 +144,5 @@ dist
 
 # TernJS port file
 .tern-port
+testApp/android/smile_detect_library-release/smile_detect_library-release.aar
+testApp/ios/Smile_Identity_SDK.framework/

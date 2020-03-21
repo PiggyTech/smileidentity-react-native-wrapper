@@ -12,7 +12,7 @@
   "dependencies": {
     "react": "16.9.0",
     "react-native": "0.61.5",
-    "smileidentity-react-native-wrapper": "^1.0.42"
+    "smileidentity-react-native-wrapper": "^1.0.43"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

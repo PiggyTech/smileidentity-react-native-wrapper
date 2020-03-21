@@ -1,7 +1,7 @@
 {
   "name": "smileidentity-react-native-wrapper",
   "title": "Smile Identity React Native wrapper",
-  "version": "1.0.42",
+  "version": "1.0.43",
   "description": "TODO",
   "main": "index.js",
   "scripts": {
