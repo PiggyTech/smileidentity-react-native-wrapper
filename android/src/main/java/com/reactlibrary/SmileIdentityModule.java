@@ -109,7 +109,6 @@ public class SmileIdentityModule extends ReactContextBaseJavaModule
                     try {
                         String tempFilePath = Utilities.Files.saveBitmap(currentActivity, bitmap, photoQuality, fileName);
                         onCompleteCallback.invoke(tempFilePath);
-                        smartSelfieManager.pause();
                     } catch (IOException ioexception) {
                         eventEmitter.sendErrorEvent(ioexception.getMessage());
                     }
@@ -136,8 +135,25 @@ public class SmileIdentityModule extends ReactContextBaseJavaModule
 
     @ReactMethod
     @SuppressWarnings("unused")
+    private void pauseCapturing() {
+        runOnUiThread( () -> {
+            if (smartSelfieManager == null) {
+                return;
+            }
+            smartSelfieManager.pause();
+        });
+    }
+
+    @ReactMethod
+    @SuppressWarnings("unused")
     private void stopCapturing() {
-        onHostDestroy();
+        runOnUiThread( () -> {
+            if (smartSelfieManager == null) {
+                return;
+            }
+            smartSelfieManager.stop();
+            cameraDialog.dismiss();
+        });
     }
 
     @SuppressWarnings("UnusedReturnValue")
