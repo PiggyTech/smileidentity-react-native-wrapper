@@ -12,6 +12,7 @@ class SmileIdentity: RCTEventEmitter {
 
     private var captureSelfie: CaptureSelfie?
     private var previewBackgroundView: UIView!
+    private var cancelButton: UIButton!
     private var previewView: VideoPreviewView!
     private var userTag: String!
     private var compressionQuality: CGFloat!
@@ -76,15 +77,15 @@ class SmileIdentity: RCTEventEmitter {
     }
 
     private func addCancelButton() {
-        let button   = UIButton(type: UIButton.ButtonType.system) as UIButton
+        cancelButton = UIButton(type: UIButton.ButtonType.system) as UIButton
         let buttonWidth: CGFloat = 75;
-        button.frame = CGRect(x: self.controllerReference.view.frame.width - 42 - buttonWidth/2, y: 24, width: buttonWidth, height: 105)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
-        button.setTitle("Cancel", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.addTarget(self, action: #selector(stopCapturing), for: .touchUpInside)
+        cancelButton.frame = CGRect(x: self.controllerReference.view.frame.width - 42 - buttonWidth/2, y: 24, width: buttonWidth, height: 105)
+        cancelButton.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+        cancelButton.setTitle("Cancel", for: .normal)
+        cancelButton.setTitleColor(.white, for: .normal)
+        cancelButton.addTarget(self, action: #selector(stopCapturing), for: .touchUpInside)
 
-        self.controllerReference.view.addSubview(button)
+        self.controllerReference.view.addSubview(cancelButton)
     }
 
     @objc(pauseCapturing)
@@ -103,6 +104,7 @@ class SmileIdentity: RCTEventEmitter {
             guard self.captureSelfie != nil else {
                 return; }
             self.captureSelfie!.stop()
+            self.cancelButton.removeFromSuperview()
             self.previewView.removeFromSuperview()
             self.previewBackgroundView.removeFromSuperview();
         }

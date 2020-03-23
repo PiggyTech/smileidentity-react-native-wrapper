@@ -18,7 +18,7 @@ import {
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 import {NativeEventEmitter} from 'react-native';
-import SmileIdentity from 'react-native-smile-identity';
+import SmileIdentity from 'smileidentity-react-native-wrapper';
 
 export default class App extends Component<{}> {
   /**
@@ -60,7 +60,7 @@ export default class App extends Component<{}> {
     const stopCapturingSelfie = () => {
       SmileIdentity.stopCapturing()
     };
-
+    
     return (
       <>
         <StatusBar barStyle="dark-content" />

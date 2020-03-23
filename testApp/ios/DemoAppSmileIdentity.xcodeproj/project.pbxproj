@@ -12,8 +12,8 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		A5E5EBBFE912947FA358A7D8 /* libPods-DemoAppSmileIdentity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CF26800E8BB9B2C4C0BDCEF0 /* libPods-DemoAppSmileIdentity.a */; };
-		EAC4CACF24261D8100C72698 /* Smile_Identity_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAC4CACD24261D7F00C72698 /* Smile_Identity_SDK.framework */; };
-		EAC4CAD024261D8100C72698 /* Smile_Identity_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EAC4CACD24261D7F00C72698 /* Smile_Identity_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EA4F0E842428FE6D00B30C26 /* Smile_Identity_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA4F0E822428FE3E00B30C26 /* Smile_Identity_SDK.framework */; };
+		EA4F0E852428FE6D00B30C26 /* Smile_Identity_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EA4F0E822428FE3E00B30C26 /* Smile_Identity_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EACA91D923BEBBA200A99112 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACA91D823BEBBA200A99112 /* Dummy.swift */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EAC4CAD024261D8100C72698 /* Smile_Identity_SDK.framework in Embed Frameworks */,
+				EA4F0E852428FE6D00B30C26 /* Smile_Identity_SDK.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,7 +50,7 @@
 		CF26800E8BB9B2C4C0BDCEF0 /* libPods-DemoAppSmileIdentity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DemoAppSmileIdentity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E183F970D16A87712068F315 /* Pods-DemoAppSmileIdentity-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoAppSmileIdentity-tvOS.release.xcconfig"; path = "Target Support Files/Pods-DemoAppSmileIdentity-tvOS/Pods-DemoAppSmileIdentity-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		E7C3D62801A8CBFB902FBB38 /* Pods-DemoAppSmileIdentity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoAppSmileIdentity.release.xcconfig"; path = "Target Support Files/Pods-DemoAppSmileIdentity/Pods-DemoAppSmileIdentity.release.xcconfig"; sourceTree = "<group>"; };
-		EAC4CACD24261D7F00C72698 /* Smile_Identity_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Smile_Identity_SDK.framework; sourceTree = "<group>"; };
+		EA4F0E822428FE3E00B30C26 /* Smile_Identity_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Smile_Identity_SDK.framework; sourceTree = "<group>"; };
 		EACA91D723BEBBA100A99112 /* DemoAppSmileIdentity-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DemoAppSmileIdentity-Bridging-Header.h"; sourceTree = "<group>"; };
 		EACA91D823BEBBA200A99112 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EAC4CACF24261D8100C72698 /* Smile_Identity_SDK.framework in Frameworks */,
+				EA4F0E842428FE6D00B30C26 /* Smile_Identity_SDK.framework in Frameworks */,
 				A5E5EBBFE912947FA358A7D8 /* libPods-DemoAppSmileIdentity.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -104,7 +104,7 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EAC4CACD24261D7F00C72698 /* Smile_Identity_SDK.framework */,
+				EA4F0E822428FE3E00B30C26 /* Smile_Identity_SDK.framework */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				CF26800E8BB9B2C4C0BDCEF0 /* libPods-DemoAppSmileIdentity.a */,
 			);
